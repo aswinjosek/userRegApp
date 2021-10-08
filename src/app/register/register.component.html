@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-3 col-sm-12"></div>
+        <div class="col-lg-4 col-md-3 col-sm-12">
+            <div class="account mt-3">
+                <h3 class="text-center text-white">Registration</h3>
+                <form class="d-flex justify-content-center" [formGroup]="registerForm">
+                    <div class="">
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="username" formControlName="username"
+                                aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('username')?.touched||this.registerForm.get('username')?.dirty)&&this.registerForm.get('username')?.errors" class="text-danger">Invalid username</div>
+    
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="password" name="password" placeholder="Password"
+                            formControlName="password" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('password')?.touched||this.registerForm.get('password')?.dirty)&&this.registerForm.get('password')?.errors" class="text-danger">Invalid password</div>
+                       
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="empid" placeholder="empid" name="empid"
+                            formControlName="empid" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('empid')?.touched||this.registerForm.get('empid')?.dirty)&&this.registerForm.get('empid')?.errors" class="text-danger">Invalid empid</div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="name" placeholder="name" name="name" formControlName="name"
+                                aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('name')?.touched||this.registerForm.get('name')?.dirty)&&this.registerForm.get('name')?.errors" class="text-danger">Invalid name</div>
+                            <div class="w-100"></div>
+                    </div>
+                    <div class="ms-2">
+                        <div class="col-12 mt-3">
+                            <input type="email" class="form-control" id="email" placeholder="email" name="email"
+                            formControlName="email" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('email')?.touched||this.registerForm.get('email')?.dirty)&&this.registerForm.get('email')?.errors" class="text-danger">Invalid email</div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="phone" placeholder="phone" name="phone"
+                            formControlName="phone" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('phone')?.touched||this.registerForm.get('phone')?.dirty)&&this.registerForm.get('phone')?.errors" class="text-danger">Invalid phone</div>
+                        <div class="col-12 mt-3">
+                            <input type="text"  class="form-control" id="designation" placeholder="designation" name="designation"
+                            formControlName="designation" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('designation')?.touched||this.registerForm.get('designation')?.dirty)&&this.registerForm.get('designation')?.errors" class="text-danger">Invalid designation</div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="address" placeholder="address" name="address"
+                            formControlName="address" aria-label="Last name" />
+                        </div>
+                        <div *ngIf="(this.registerForm.get('address')?.touched||this.registerForm.get('address')?.dirty)&&this.registerForm.get('address')?.errors" class="text-danger">Invalid address</div>
+                    </div>
+    
+                </form>
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-primary" (click)="register()">
+                        Submit
+                    </button>
+                    <a class="ms-3 mt-1" routerLink="/login">Login</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12"></div>
+    </div>
+</div>
